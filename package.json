@@ -1,0 +1,26 @@
+{
+  "name": "@arsalanfallahpour/uicenter",
+  "version": "0.1.0",
+  "description": "UiCenter is a free User-Interface Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsalanfallahpour/UiCenter.git"
+  },
+  "keywords": [
+    "ui",
+    "uicenter",
+    "uicentercore",
+    "ui-library",
+    "library"
+  ],
+  "author": "Arsalan Fallahpour",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/arsalanfallahpour/UiCenter/issues"
+  },
+  "homepage": "https://github.com/arsalanfallahpour/UiCenter#readme"
+}
