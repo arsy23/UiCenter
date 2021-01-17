@@ -1,0 +1,63 @@
+//Not Tested
+// /// #string-split($input-string[, $separator]) => list
+// /// Returns an array of strings by separating the string into substrings
+// /// @param {string} $input string - input string
+// /// @param {string} $separator - separator to split on [' ']
+// /// @return {list}
+// /// @example
+// ///   @debug string-split('Hello World');
+// ///   // => ("Hello" "World")
+// ///   @debug string-split('Hello World, Hello World', ', ');
+// ///   // => ("Hello World" "Hello World")
+// @function string-split($input-string, $separator: ' ') {
+
+//   $list: ();
+//   $index: string-index($input-string, $separator);
+//   $indent: str-length($separator);
+
+//   @while ($index != null) {
+//       $item: str-slice($input-string, 1, $index - 1);
+//       $input-string: str-slice($input-string, $index + $indent);
+//       $index: string-index($input-string, $separator);
+
+//       @if (str-length($item) != 0) {
+//           $list: append($list, $item);
+//       }
+//   }
+
+//   @return append($list, $input-string);
+// }
+
+
+/// @param {String} $string    - string to split
+/// @param {String} $delimiter ('') - string to use as a delimiter to split `$string`
+/// @return {List}
+@function string-split($string, $delimiter: "") {
+  $result: ();
+  $length: str-length($string);
+
+  @if str-length($delimiter) == 0 {
+    @for $i from 1 through $length {
+      $result: append($result, str-slice($string, $i, $i));
+    }
+
+    @return $result;
+  }
+
+  $running: true;
+  $remaining: $string;
+
+  @while $running {
+    $index: str-index($remaining, $delimiter);
+
+    @if $index {
+      $slice: str-slice($remaining, 1, $index - 1);
+      $result: append($result, $slice);
+      $remaining: str-slice($remaining, $index + str-length($delimiter));
+    } @else {
+      $running: false;
+    }
+  }
+
+  @return append($result, $remaining);
+}

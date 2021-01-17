@@ -1,0 +1,12 @@
+/// #string-include($input-string, $substring) => boolean
+/// Returns boolean result of check if string contains a substring.
+/// @param {string} $input-string
+/// @param {string} $substring
+/// @return {boolean}
+/// @example
+///   @debug string-include('Hello World', 'lo');
+///   // => true
+
+@function string-include($input-string, $substring) {
+    @return not not string-index($input-string, $substring);
+}

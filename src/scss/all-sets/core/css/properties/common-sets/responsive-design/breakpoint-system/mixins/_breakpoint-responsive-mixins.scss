@@ -1,0 +1,10 @@
+@mixin responsive-to($val, $breakpoint) {
+    @media screen and ($val : $breakpoint) {
+        @content;
+    }
+}
+@mixin responsive-to-2D-and($val, $breakpoint, $val-2, $breakpoint-2) {
+    @media screen and ($val : $breakpoint) and ($val-2 : $breakpoint-2) {
+        @content;
+    }
+}

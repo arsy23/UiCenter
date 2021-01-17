@@ -1,0 +1,15 @@
+/*examples:
+-webkit-box-ordinal-group: 1 | <positive integer>
+-moz-box-ordinal-group: 1 | <positive integer>
+-ms-flex-order: 0 | <integer>
+-webkit-order: 0 | <integer>
+order: 0 | <integer>
+*/
+@mixin order($value) {
+
+    -webkit-box-ordinal-group : $value + 1;
+    -webkit-order : $value;
+       -moz-box-ordinal-group : $value + 1;
+        -ms-flex-order : $value;
+            order : $value;
+}

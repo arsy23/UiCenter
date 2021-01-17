@@ -1,0 +1,11 @@
+
+// values :  nowrap|wrap|wrap-reverse|initial|inherit;
+
+@mixin flex-wrap($value : row) {
+
+    -webkit-flex-wrap : $value;
+        -ms-flex-wrap : $value;
+            flex-wrap : $value;
+}
+
+

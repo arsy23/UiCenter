@@ -1,0 +1,84 @@
+//fallthrough syntax #1
+// @mixin button1($button-type){
+//     @extend %button; //all buttons extend button
+
+//     @include switch($button-type) {
+//     @include    case( logout ) {
+//                     @extend %big-button;
+//                     @extend %blue-button; 
+//     @include        case-break; }
+//     @include    case( help ) {} //fall through:
+//     @include    case( go ) { 
+//                     @extend %big-button; } 
+//     @include    case( call ) {} //fall through:
+//     @include    case( download ) { 
+//                     @extend %green-button;
+//     @include        case-break; }
+//     @include    case( default ){
+//                     @extend %beige-button;
+//     @include        case-break; } 
+//              }
+//     //end switch
+// }
+// //fallthrough syntax #2 (condensed)
+// @mixin button2($button-type){
+//     @extend %button; //all buttons extend button
+
+//     @include switch($button-type){
+//     @include    case( logout ) {
+//                     @extend %big-button;
+//                     @extend %blue-button;
+//     @include        case-break; }
+//     @include    case( (help, go) ) {
+//                     @extend %big-button; } //fall through:
+//     @include    case( (call, download) ) {//default button
+//                     @extend %green-button;
+//   @include        case-break; }
+//    @include    case( default ) {
+                    // @extend %beige-button;
+//    @include        case-break; }
+//             }
+    //end switch
+//}
+
+// case statement functionality
+$z_SwitchCaseList:() !global; 
+$z_SwitchCaseFoundList: () !global;
+@mixin switch-case($case-values:default)
+{
+    //only for use inside a switch include, used for creating a switch case statement
+    $switch-value: list-get-last-item($z_SwitchCaseList);
+    $value-found: list-get-last-item($z_SwitchCaseFoundList);
+    @if ( $value-found != break ) {
+        $match: if($value-found == false, false, true);
+        @if ($match == false ) {
+            @each $case in $case-values {
+                @if $case == $switch-value or $case == default {
+                    @if $value-found != break {
+                        $match: true;
+                    }
+                }
+                @if $switch-value != () and $switch-value != $case and $case == default and $value-found != break
+                { //case is default and switch val not found
+                    @warn "#{$switch-value} not found, using default case";
+                }
+            }
+        }
+        @if $match == true {
+            $z_SwitchCaseFoundList: set-nth($z_SwitchCaseFoundList, length($z_SwitchCaseFoundList), $match) !global;
+            @content;
+        }
+    }
+}
+@mixin switch($switch-value)
+{   
+    $z_SwitchCaseList: append($z_SwitchCaseList, $switch-value) !global;
+    $z_SwitchCaseFoundList: append($z_SwitchCaseFoundList, false) !global;
+    @content;
+    $z_SwitchCaseFoundList: list-remove-item-nth($z_SwitchCaseFoundList, length($z_SwitchCaseFoundList)) !global;
+    $z_SwitchCaseList: list-remove-item-nth($z_SwitchCaseList, length($z_SwitchCaseList)) !global;
+}
+@mixin case-break {
+    //include this inside the case item, not after, if you want to discontinue processing case statements once the correct one is found.
+    $z_SwitchCaseFoundList: set-nth($z_SwitchCaseFoundList, length($z_SwitchCaseFoundList), break) !global;
+}

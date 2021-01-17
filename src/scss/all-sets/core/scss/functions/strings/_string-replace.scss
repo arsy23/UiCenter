@@ -1,0 +1,29 @@
+/// #string-replace($input-string, $substring[, $replace, $g]) => string
+/// Returns copy of input string where defined substring replaced by $replace argument
+/// @param {string} $input-string
+/// @param {string} $substring
+/// @param {string} $replace ['']
+/// @param {boolean} $g [true]
+/// @return {string}
+/// @example
+///   @debug string-replace('Hello world', 'l');
+///   // => "Heo word"
+///   @debug string-replace('Hello world', 'l', $g: false);
+///   // => "Helo world"
+///   @debug string-replace('Hello world', 'Hello', 'Privet');
+///   // => "Privet world"
+
+@function string-replace($input-string, $substring, $replace: '', $g: true) {
+
+    $index: string-index($input-string, $substring);
+
+    @if $index {
+        @if $g {
+            @return str-slice($input-string, 1, $index - 1) + $replace + string-replace(str-slice($input-string, $index + str-length($substring)), $substring, $replace);
+        } @else {
+            @return str-slice($input-string, 1, $index - 1) + $replace + str-slice($input-string, $index + str-length($substring));
+        }
+    }
+
+    @return $input-string;
+}

@@ -1,0 +1,17 @@
+/// #string-ltrim($input-string[, $trim-chars]) => string
+/// Returns string with removed leading characters.
+/// @param {string} $input-string
+/// @param {string} $trim-chars [' ']
+/// @return {string}
+/// @example
+///   @debug string-ltrim(' Hello World ');
+///   // => "Hello World "
+///   @debug string-ltrim(' -_ Helllo World _- ', '- _');
+///   // => "Helllo World _- "
+
+@function string-ltrim($input-string, $trim-chars: ' ') {
+    @return str-slice(
+                    $input-string,
+                    string-get-not-skipped-char-index($input-string, 'left', $trim-chars)
+    );
+}

@@ -1,0 +1,6 @@
+%flex-fill{
+  @include flex(1);
+}
+%flex-auto{
+  @include flex(auto !important);
+}

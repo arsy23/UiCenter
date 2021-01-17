@@ -1,0 +1,8 @@
+@mixin calculate($property, $value) {
+
+    $property  : unquote($property);
+
+    #{$property}: -webkit-calc(#{$value}) !important;
+    #{$property}: -moz-calc(#{$value}) !important;
+    #{$property}: calc(#{$value}) !important;
+}

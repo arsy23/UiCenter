@@ -1,0 +1,18 @@
+/// #string-rtrim($input-string[, $trim-chars]) => string
+/// Returns string with removed trailing characters.
+/// @param {string} $input-string
+/// @param {string} $trim-chars [' ']
+/// @return {string}
+/// @example
+///   @debug string-rtrim(' Hello World ');
+///   // => " Hello World"
+///   @debug string-rtrim(' -_ Helllo World _- ', '- _');
+///   // => " -_ Helllo World"
+
+@function string-rtrim($input-string, $trim-chars: ' ') {
+    @return str-slice(
+                    $input-string,
+                    1,
+                    string-get-not-skipped-char-index($input-string, 'right', $trim-chars)
+    );
+}

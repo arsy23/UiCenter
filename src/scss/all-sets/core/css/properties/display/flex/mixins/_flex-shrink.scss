@@ -1,0 +1,6 @@
+@mixin flex-shrink($value : 0) {
+
+    -webkit-flex-shrink : $value;
+        -ms-flex-negative : $value;
+            flex-shrink : $value;
+}

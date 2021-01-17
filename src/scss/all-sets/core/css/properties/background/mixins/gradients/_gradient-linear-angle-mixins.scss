@@ -1,0 +1,202 @@
+//@mixin gradient-linear($pre-value, $value, $basecolor: #111, $start-color: '#111', $end-color: '#000')
+//{
+//    // background: linear-gradient(#6490FF,#4567F1);
+//    background: $basecolor;
+//    background: -moz-linear-gradient($pre-value);
+//    background: -webkit-linear-gradient($pre-value);
+//    background: -ms-linear-gradient($pre-value);
+//    background: linear-gradient($value);
+//    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=' #{$start-color}', endColorstr= '#{$end-color}', GradientType=1 );
+//}
+
+//	background: rgba(47,137,252,1);
+//	background: -moz-linear-gradient(-45deg, rgba(47,137,252,1) 0%, rgba(94,255,201,1) 100%);
+//	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(47,137,252,1)), color-stop(100%, rgba(94,255,201,1)));
+//	background: -webkit-linear-gradient(-45deg, rgba(47,137,252,1) 0%, rgba(94,255,201,1) 100%);
+//	background: -o-linear-gradient(-45deg, rgba(47,137,252,1) 0%, rgba(94,255,201,1) 100%);
+//	background: -ms-linear-gradient(-45deg, rgba(47,137,252,1) 0%, rgba(94,255,201,1) 100%);
+//	background: linear-gradient(135deg, rgba(47,137,252,1) 0%, rgba(94,255,201,1) 100%);
+//	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f89fc', endColorstr='#5effc9', GradientType=1 );
+
+@mixin gradient-linear-angle($angle, $compatibility-mode, $color-stop-parameters...) {
+
+
+    $traditional-angle: "";
+
+    $color-stops-joined: #{ parameters-join(",", $color-stop-parameters) };
+    
+    $prifixes-angle: null;
+
+    @if($angle >=0 and $angle <=45) {
+
+        @if($angle >=0 and $angle <=22) {
+            $traditional-angle: "left top, right top";
+
+        }
+
+        @else if($angle >=23 and $angle <=45) {
+            $traditional-angle: "left bottom, right top";
+            color: $traditional-angle;
+
+        }
+
+        $prifixes-angle : 90 - $angle+deg;
+
+    }
+
+    @else if($angle >=46 and $angle <=90) {
+
+
+        @if($angle >=46 and $angle <=67) {
+            $traditional-angle: "left bottom, right top";
+
+        }
+
+        @else if($angle >=68 and $angle <=90) {
+            $traditional-angle: "left top, left bottom";
+
+        }
+
+        $prifixes-angle : 90 - $angle+deg;
+
+    }
+
+    @else if($angle >=91 and $angle <=135) {
+
+
+
+        @if($angle >=91 and $angle <=113) {
+            $traditional-angle: "left top, left bottom";
+
+        }
+
+        @else if($angle >=114 and $angle <=135) {
+            $traditional-angle: "left top, right bottom";
+
+        }
+
+        $prifixes-angle : 360+(90 - $angle)+deg;
+
+    }
+
+    @else if($angle >=136 and $angle <=180) {
+
+        @if($angle >=136 and $angle <=157) {
+            $traditional-angle: "left top, right bottom";
+
+        }
+
+        @else if($angle >=158 and $angle <=180) {
+            $traditional-angle: "left top, right top";
+
+        }
+
+        $prifixes-angle : 360+(90 - $angle)+deg;
+    }
+
+    @else if($angle >=181 and $angle <=225) {
+
+        @if($angle >=181 and $angle <=202) {
+            $traditional-angle: "left top, right top";
+
+        }
+
+        @else if($angle >=203 and $angle <=225) {
+            $traditional-angle: "left bottom, right top";
+
+        }
+
+        $prifixes-angle : 360+(90 - $angle)+deg;
+
+    }
+
+    @else if($angle >=226 and $angle <=270) {
+
+        @if($angle >=226 and $angle <=247) {
+            $traditional-angle: "left bottom, right top";
+
+        }
+
+        @else if($angle >=248 and $angle <=270) {
+            $traditional-angle: "left top, left bottom";
+
+        }
+
+        $prifixes-angle : 360+(90 - $angle)+deg;
+    }
+
+    @else if($angle >=271 and $angle <=315) {
+
+        @if($angle >=271 and $angle <=292) {
+            $traditional-angle: "left top, left bottom";
+
+        }
+
+        @else if($angle >=293 and $angle <=315) {
+            $traditional-angle: "left top, right bottom";
+        }
+
+        $prifixes-angle : 360+(90 - $angle)+deg;
+
+    }
+
+    @else if($angle >=316 and $angle <=360) {
+
+        @if($angle >=316 and $angle <=338) {
+            $traditional-angle: "left top, right bottom";
+
+        }
+
+        @else if($angle >=338 and $angle <=360) {
+            $traditional-angle: "left top, right top";
+
+        }
+
+        $prifixes-angle : 360+(90 - $angle)+deg;
+
+    }
+
+    $traditional-angle : #{"linear, " + $traditional-angle};
+
+
+    $start-color-stop : list-get-first-item($color-stop-parameters);
+    $splited-start-color-stops : string-split(#{ $start-color-stop }, " ");
+
+    $start-color :  list-get-first-item($splited-start-color-stops);
+    $start-stop :  list-get-last-item($splited-start-color-stops);
+    
+    
+    $end-color-stop : list-get-last-item($color-stop-parameters);
+    $splited-end-color-stops : string-split(#{ $end-color-stop }, " ");
+
+    $end-color :  list-get-first-item($splited-end-color-stops);
+    $end-stop :  list-get-last-item($splited-end-color-stops);
+
+    @if(string-ends-with(#{ $angle }, "deg") == false)
+    {
+        $angle : $angle + deg;
+    }
+
+    background : $start-color;
+
+    background: -moz-linear-gradient($angle, $color-stops-joined) !important;
+    /* ff3.6+ */
+
+    @if( $compatibility-mode == true)
+    {
+    	background: -webkit-gradient(linear, $traditional-angle, color-stop($start-stop, $end-color), color-stop($end-stop, $start-color))  !important
+       /* safari4+,chrome */    
+    }
+
+    background: -webkit-linear-gradient($angle, $color-stops-joined) !important;
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient($angle, $color-stops-joined) !important;
+    /* opera 11.10+ */
+    background: -ms-linear-gradient($angle, $color-stops-joined) !important;
+    /* ie10+ */
+    background: linear-gradient($prifixes-angle, $color-stops-joined) !important;
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{ '\'' + $start-color + '\''}, endColorstr=#{ '\'' + $end-color + '\''}, GradientType=1);
+    /* ie6-9 */
+
+}

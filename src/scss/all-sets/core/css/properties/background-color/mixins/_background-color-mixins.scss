@@ -1,0 +1,10 @@
+@mixin background-color-transparent(){
+    background-color:transparent;
+}
+
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 70%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+}

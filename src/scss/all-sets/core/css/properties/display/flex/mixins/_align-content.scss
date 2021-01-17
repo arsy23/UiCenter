@@ -1,0 +1,13 @@
+/*examples:
+-ms-flex-line-pack: center | distribute | 
+  end | justify | start | stretch
+-webkit-align-content: center | flex-end | 
+  flex-start | space-around | space-between | stretch
+align-content: center | flex-end | flex-start | 
+  space-around | space-between | stretch
+*/
+@mixin align-content($value-1:space-between, $value-2:justify) {
+    -ms-flex-line-pack: $value-2;
+    -webkit-align-content: $value-1;
+    align-content: $value-1;
+}

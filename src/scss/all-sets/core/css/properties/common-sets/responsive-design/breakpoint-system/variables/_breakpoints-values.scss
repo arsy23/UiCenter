@@ -1,0 +1,19 @@
+//Down Point for Desktop approaches with max-width
+//Up Point for Desktop approaches with min-width
+$bp-dphone:0px;
+$bp-uphone:600px;
+$bp-dtablet-p:600px;
+$bp-utablet-p:900px;
+$bp-dtablet-l:900px;
+$bp-utablet-l:1200px;
+$bp-ddesktop-m:1200px;
+$bp-udesktop-m:1800px;
+$bp-ddesktop-l:1800px;
+$bp-udesktop-l:2560px;
+
+//Break Points
+$bp-xs: $bp-uphone;
+$bp-sm: $bp-dtablet-p;
+$bp-md: $bp-dtablet-l;
+$bp-lg: $bp-ddesktop-m;
+$bp-xl: $bp-ddesktop-l;

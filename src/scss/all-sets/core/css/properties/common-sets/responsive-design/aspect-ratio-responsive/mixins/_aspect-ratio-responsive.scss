@@ -1,0 +1,26 @@
+
+// Aspect Retio 3/2
+@mixin responsive-min-aspect-32 {
+    @include responsive-to-aspect('3/2', 'min-aspect-ratio') {
+        @content;
+    }
+}
+
+@mixin responsive-min-aspect-21 {
+    @include responsive-to-aspect('2/1', 'min-aspect-ratio') {
+        @content;
+    }
+}
+
+// Aspect Retio 1/1
+@mixin responsive-min-aspect-11 {
+    @include responsive-to-aspect('1/1', 'min-aspect-ratio') {
+        @content;
+    }
+}
+
+@mixin responsive-to-aspect($val, $attr) {
+    @media ($attr: $val) {
+        @content;
+    }
+}

@@ -1,0 +1,15 @@
+@mixin animation($animation-name, $value) {
+  -webkit-animation: $animation-name $value;
+  -moz-animation: $animation-name $value;
+  -o-animation: $animation-name $value;
+  animation: $animation-name $value;
+}
+
+@mixin animation-delay($value) {
+  -webkit-animation-delay: $value;
+  //Check for exist then un-commnet
+  // -moz-animation-delay: $value;
+  //Check for exist then un-commnet
+  // -o-animation-delay: $value;
+  animation-delay: $value;
+}

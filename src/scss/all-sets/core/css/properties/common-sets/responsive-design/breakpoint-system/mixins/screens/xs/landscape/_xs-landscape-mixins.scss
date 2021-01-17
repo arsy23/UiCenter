@@ -1,0 +1,5 @@
+@mixin responsive-bootstrap-h-xs-less {
+    @include responsive-to-2D-and(max-height, 768px){
+        @content;
+    }
+}

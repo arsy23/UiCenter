@@ -1,0 +1,3 @@
+@mixin text-fill($value : transparent){
+	-webkit-text-fill-color: $value;
+}

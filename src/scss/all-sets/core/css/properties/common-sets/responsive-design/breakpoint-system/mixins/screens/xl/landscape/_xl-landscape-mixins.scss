@@ -1,0 +1,25 @@
+@mixin responsive-xl-less {
+    @include responsive-to(max-width, $bp-xl) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-xl-more {
+    @include responsive-to-2D-and(min-width, 1200px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-xl-less {
+    @include responsive-to(max-width, 1200px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-xl-more {
+    @include responsive-to(min-width, 1200px) {
+        @content;
+    }
+}
+@mixin responsive-xl-more {
+    @include responsive-to(min-width, $bp-xl) {
+        @content;
+    }
+}

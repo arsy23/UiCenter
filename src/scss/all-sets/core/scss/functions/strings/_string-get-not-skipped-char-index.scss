@@ -1,0 +1,32 @@
+/// #string-get-not-skipped-char-index($input-string[, $search-from, $trim-chars]) => number
+/// Returns an index of first character that doesn't match any characters from $trim-chars argument
+/// @access private
+/// @param {string} $input-string
+/// @param {'left' | 'right'} $search-from ['left']
+/// @param {string} $skip-char [' ']
+/// @return {number}
+
+@function string-get-not-skipped-char-index($input-string, $search-from: 'left', $trim-chars: ' ') {
+
+    @if (type-of($input-string) != string) {
+        @error("$input-string should be a string");
+    }
+
+    @if (index(('left', 'right'), $search-from) == null) {
+        @error("$search-from should be defined as 'left' or 'right'");
+    }
+
+    $exclude: string-chars($trim-chars);
+
+    @for $i from 1 through str-length($input-string) {
+
+        $index: if($search-from == 'left', $i, -$i);
+        $char: str-slice($input-string, $index, $index);
+
+        @if (index($exclude, $char) == null) {
+            @return $index;
+        }
+    }
+
+    @return 0;
+}

@@ -1,0 +1,22 @@
+/// #string-to-swapcase($input-string) => string
+/// Returns a copy of the string in which all the case-based characters have had their case swapped.
+/// @param {string} $input-string
+/// @return {string}
+/// @example
+///   @debug string-to-swapcase('hELLO wORLD');
+///   // => "Hello World"
+
+@function string-to-swapcase($input-string) {
+    $chars: string-chars($input-string);
+    $string: '';
+
+    @each $char in $chars {
+        @if ($char == string-to-uppercase($char)) {
+            $string: $string + string-to-lowercase($char);
+        } @else {
+            $string: $string + string-to-uppercase($char);
+        }
+    }
+
+    @return $string;
+}

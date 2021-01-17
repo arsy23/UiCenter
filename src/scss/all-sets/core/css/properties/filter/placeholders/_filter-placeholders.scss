@@ -1,0 +1,9 @@
+%filter-blur-full{
+    @include filter(blur(100px));
+}
+%filter-blur-medium{
+    @include filter(blur(50px));
+}
+%filter-blur-non{
+    @include filter(blur(0));
+}

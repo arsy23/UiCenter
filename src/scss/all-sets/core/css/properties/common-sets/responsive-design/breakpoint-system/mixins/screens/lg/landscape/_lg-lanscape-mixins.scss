@@ -1,0 +1,31 @@
+@mixin responsive-lg {
+    @include responsive-to-2D-and(min-width, $bp-lg, max-width, $bp-xl) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-lg {
+    @include responsive-to-2D-and(min-width, 992px, max-width, 1200px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-lg-less {
+    @include responsive-to(max-width, 992px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-lg-more {
+    @include responsive-to(min-width, 992px) {
+        @content;
+    }
+}
+
+@mixin responsive-lg-more {
+    @include responsive-to(min-width, $bp-lg) {
+        @content;
+    }
+}
+@mixin responsive-lg-less {
+    @include responsive-to(max-width, $bp-lg) {
+        @content;
+    }
+}

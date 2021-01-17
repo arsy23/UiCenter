@@ -1,0 +1,12 @@
+@mixin box-shadow($value : none) {
+    box-shadow: $value;
+    -moz-box-shadow: $value;
+    -webkit-box-shadow: $value;
+}
+
+@mixin box-shadow-with-back-color($value, $backcolor:#000) {
+    background-color: $back-color;
+    box-shadow: $value;
+    -moz-box-shadow: $value;
+    -webkit-box-shadow: $value;
+}

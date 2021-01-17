@@ -1,0 +1,111 @@
+
+ //values : flex-direction flex-wrap|initial|inherit
+
+
+// possible-values : flex-direction flex-wrap
+//row nowrap
+//row-reverse nowrap
+//column nowrap
+//column-reverse nowrap
+//row wrap
+//row-reverse wrap
+//column wrap
+//column-reverse wrap
+//row wrap-reverse
+//row-reverse wrap-reverse
+//column wrap-reverse
+//column-reverse wrap-reverse
+
+
+/*examples:
+-ms-flex-flow: <-ms-flex-direction> || <-ms-flex-wrap>
+-webkit-flex-flow: <flex-direction> || <flex-wrap>
+flex-flow: <flex-direction> || <flex-wrap>
+*/
+
+@mixin flex-flow($value: row) {
+ 
+    $value : string-trim($value);
+
+    $value-splited : string-split($value, ' ');
+    $box-orient : "";
+    $box-direction : "";
+    $include : true;
+
+    @if(($value == "wrap") or ($value == "nowrap"))
+    {
+       $include : false;
+
+    }
+    @else if($value == column)
+    {
+	$box-orient : vertical;
+ 	$box-direction : normal;
+    }
+    @else if($value == "row-reverse")
+    {
+	$box-orient : horizontal;
+ 	$box-direction : reverse;
+    }
+    @else if($value == "wrap-reverse")
+    {
+	$box-orient : vertical;
+ 	$box-direction : normal;
+    }
+    @else if( $value == "column-reverse")
+    {
+	$box-orient : vertical;
+ 	$box-direction : reverse;
+    }
+    @else if($value == "row" )
+    {
+	$box-orient : horizontal;
+ 	$box-direction : normal;
+    }
+
+    @else if( $value == inherit or $value == initial )
+    {
+	$box-orient : $value;
+	$box-direction : $value;
+    }
+    @if((index($value-splited, "column") ==  1) and (length($value-splited) ==  2))
+    {
+ 	$box-orient : vertical;
+ 	$box-direction : normal;
+    }
+    @if((index($value-splited, "row") ==  1) and (length($value-splited) ==  2))
+    {
+ 	$box-orient : horizontal;
+ 	$box-direction : normal;
+    }
+    @if((index($value-splited, "row-reverse") ==  1) and (length($value-splited) ==  2))
+    {
+ 	$box-orient : horizontal;
+ 	$box-direction : reverse;
+    }
+    @if((index($value-splited, "column-reverse") ==  1) and (length($value-splited) ==  2))
+    {
+ 	$box-orient : vertical;
+ 	$box-direction : reverse;
+    }
+
+
+    @if($include == true)
+    {
+
+    	-webkit-box-orient : $box-orient;
+        -webkit-box-direction : $box-direction;
+    }
+    	-webkit-flex-flow : $value ;
+    @if($include == true)
+    {
+    	-moz-box-orient :$box-orient;
+    }
+
+       -moz-box-direction : $box-direction;
+        -ms-flex-flow : $value ;
+            flex-flow : $value;
+
+}
+	
+

@@ -1,0 +1,86 @@
+@mixin responsive-bootstrap-w-xl-less-h-sm-less {
+    @include responsive-to-2D-and(max-width, 1200px,max-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-xl-less-h-sm-less {
+    @include responsive-to-2D-and(max-width, 576px,max-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-sm-less-h-sm-more {
+    @include responsive-to-2D-and(max-width, 576px,min-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-less-h-sm-more {
+    @include responsive-to-2D-and(max-width, 768px,min-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-more-h-sm-less {
+    @include responsive-to-2D-and(min-width, 768px,max-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-sm-less-h-sm-less {
+    @include responsive-to-2D-and(max-width, 576px,max-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-sm-less-h-md-less {
+    @include responsive-to-2D-and(max-width, 576px,max-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-less-h-sm-less {
+    @include responsive-to-2D-and(max-width, 768px,max-height, 576px){
+        @content;
+    }
+}
+@mixin responsive-sm-less {
+    @include responsive-to(max-width, $bp-sm) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-sm-less {
+    @include responsive-to(max-width, 576px) {
+        @content;
+    }
+}
+@mixin responsive-sm-lg {
+    @include responsive-to-2D-and(min-width, $bp-sm, max-width, $bp-lg) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-sm-xl {
+    @include responsive-to-2D-and(min-width, 576px, max-width, 1200px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-sm {
+    @include responsive-to-2D-and(min-width, 576px, max-width, 768px) {
+        @content;
+    }
+}
+@mixin responsive-sm-more {
+    @include responsive-to(min-width, $bp-sm) {
+        @content;
+    }
+}
+@mixin  responsive-bootstrap-sm-lg {
+    
+    @include responsive-to(min-width, 576px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-sm-more {
+    @include responsive-to(min-width, 576px) {
+        @content;
+    }
+}
+@mixin responsive-sm-xl {
+    @include responsive-to-2D-and(min-width, $bp-sm, max-width, $bp-xl) {
+        @content;
+    }
+}

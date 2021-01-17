@@ -1,0 +1,25 @@
+/// #string-decapitalize($input-string[, $lowercase-rest]) => string
+/// Returns string with decapitalized first letter
+/// @param {string} $input-string
+/// @param {boolean} $lowercase-rest [false]
+/// @return {string}
+/// @example
+///   @debug string-decapitalize('Hello World');
+///   // => "hello World"
+///   @debug string-decapitalize('HELLO WORLD');
+///   // => "hELLO WORLD"
+///   @debug string-decapitalize('HELLO world', true);
+///   // => "hello world"
+
+@function string-decapitalize($input-string, $lowercase-rest: false) {
+
+    @if ($lowercase-rest == true) {
+        $first-item: nth(string-split($input-string), 1);
+        $first-item: string-to-lowercase($first-item);
+        $input-string: $first-item + str-slice($input-string, str-length($first-item) + 1);
+    } @else {
+        $input-string: string-decapitalize-first($input-string);
+    }
+
+    @return $input-string;
+}

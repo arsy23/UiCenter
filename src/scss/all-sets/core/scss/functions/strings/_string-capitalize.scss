@@ -1,0 +1,25 @@
+/// #string-capitalize($input-string[, $lowercase-rest]) => string
+/// Returns string with capitalized first letter
+/// @param {string} $input-string - input string
+/// @param {boolean} $lowercase-rest [false]
+/// @return {string}
+/// @example
+///   @debug string-capitalize('hello wold');
+///   // => "Hello wold"
+///   @debug string-capitalize('hELLO wold');
+///   // => "HELLO wold"
+///   @debug string-capitalize('hELLO wold', true);
+///   // => "Hello wold"
+
+@function string-capitalize($input-string, $lowercase-rest: false) {
+
+    @if ($lowercase-rest == true) {
+        $first-item: nth(string-split($input-string), 1);
+        $first-item: string-capitalize-first(string-to-lowercase($first-item));
+        $input-string: $first-item + str-slice($input-string, str-length($first-item) + 1);
+    } @else {
+        $input-string: string-capitalize-first($input-string);
+    }
+
+    @return $input-string;
+}

@@ -1,0 +1,18 @@
+/// #string-count($input-string, $substring) => number
+/// Returns number of occurrences of substring in string.
+/// @param {string} $input-string
+/// @param {string} $substring
+/// @return {number}
+/// @example
+///   @debug string-count('Hello World', 'z');
+///   // => 0
+///   @debug string-count('Hello World', 'l');
+///   // => 3
+///   @debug string-count('Hello World Hello World Hello World', 'ello');
+///   // => 3
+
+@function string-count($input-string, $substring) {
+    $substring-info: string-substring-info($input-string, $substring);
+
+    @return map-get($substring-info, count);
+}

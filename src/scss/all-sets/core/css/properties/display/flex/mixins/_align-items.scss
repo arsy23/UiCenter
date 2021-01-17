@@ -1,0 +1,33 @@
+
+// values : stretch|center|flex-start|flex-end|baseline|initial|inherit
+
+@mixin align-items($value: flex-start) {
+ 
+    $traditional-value : "";
+
+    @if($value == flex-start)
+    {
+	$traditional-value : start;
+    }
+    @else if($value == flex-end)
+    {
+	$traditional-value : end;
+    }
+    @else if(
+		$value == inherit or
+ 		$value == initial or
+ 		$value == baseline or
+ 		$value == center or
+ 		$value == stretch
+	)
+    {
+	$traditional-value : $value;
+    }
+
+   -webkit-box-align: $traditional-value;
+     -webkit-align-items: $value;
+      -moz-box-align: $traditional-value;
+       -ms-flex-align: $traditional-value;
+           align-items :$value;
+
+}
