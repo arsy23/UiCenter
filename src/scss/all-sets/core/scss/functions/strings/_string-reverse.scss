@@ -1,0 +1,18 @@
+/// #string-reverse($input-string) => string
+/// Returns reversed string.
+/// @param {string} $input-string
+/// @return {string}
+/// @example
+///   @debug string-reverse('Hello World');
+///   // => "dlroW olleH"
+
+@function string-reverse($input-string) {
+    $output-string: '';
+    $chars: string-chars($input-string);
+
+    @for $i from length($chars) through 1 {
+        $output-string: $output-string + nth($chars, $i);
+    }
+
+    @return $output-string;
+}

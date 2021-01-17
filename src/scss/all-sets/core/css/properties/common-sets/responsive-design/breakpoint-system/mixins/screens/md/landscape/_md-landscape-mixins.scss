@@ -1,0 +1,65 @@
+@mixin responsive-md {
+    @include responsive-to-2D-and(min-width, $bp-md, max-width, $bp-lg) {
+        @content;
+    }
+}
+@mixin responsive-md-less {
+    @include responsive-to(max-width, $bp-md) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-md-less {
+    @include responsive-to(max-width, 768px) {
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-less-h-md-less {
+    @include responsive-to-2D-and(max-width, 768px,max-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-md{
+    @include responsive-to-2D-and(min-width, 768px, max-width, 992px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-more-h-md-less {
+    @include responsive-to-2D-and(min-width, 768px,max-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-less-h-md-more {
+    @include responsive-to-2D-and(max-width, 768px,min-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-less-h-md-more {
+    @include responsive-to-2D-and(min-width, 768px,min-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-more-h-md-more {
+    @include responsive-to-2D-and(min-width, 768px,min-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-w-md-less-h-md-more {
+    @include responsive-to-2D-and(max-width, 576px,max-height, 768px){
+        @content;
+    }
+}
+@mixin responsive-bootstrap-md-more {
+    @include responsive-to(min-width, 768px) {
+        @content;
+    }
+}
+@mixin responsive-md-more {
+    @include responsive-to(min-width, $bp-md) {
+        @content;
+    }
+}
+@mixin responsive-md-xl {
+    @include responsive-to-2D-and(min-width, $bp-md, max-width, $bp-xl) {
+        @content;
+    }
+}

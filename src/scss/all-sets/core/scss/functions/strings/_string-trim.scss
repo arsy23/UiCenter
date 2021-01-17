@@ -1,0 +1,18 @@
+/// #string-trim($input-string[, $trim-chars]) => string
+/// Returns trimmed string
+/// @param {string} $input-string
+/// @param {string} $trim-chars [' ']
+/// @return {string}
+/// @example
+///   @debug string-trim(' Hello World ');
+///   // => "Hello World"
+///   @debug string-trim(' -_ Helllo World _- ', '- _');
+///   // => "Hello World"
+
+@function string-trim($input-string, $trim-chars: ' ') {
+    @return str-slice(
+                    $input-string,
+                    string-get-not-skipped-char-index($input-string, 'left', $trim-chars),
+                    string-get-not-skipped-char-index($input-string, 'right', $trim-chars)
+    );
+}

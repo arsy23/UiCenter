@@ -1,0 +1,5 @@
+@mixin supports-clip-path($value) {
+    @supports(-webkit-clip-path:$value)or(clip-path:$value) {
+        @content;
+    }
+}

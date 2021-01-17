@@ -1,0 +1,15 @@
+@mixin background-clip($value : text , $unset-text-fill : false){
+    background-clip: $value ;
+    -webkit-background-clip: $value;
+    -moz-background-clip: $value;
+    -ms-background-clip: $value;
+    -o-background-clip: $value;
+	@if($value == text)
+	{
+		@include text-fill;
+	}
+	@if($unset-text-fill == true and $value == unset)
+	{
+		@include text-fill(unset !important);
+	}
+}

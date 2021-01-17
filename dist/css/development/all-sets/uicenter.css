@@ -1,0 +1,69 @@
+/*start-> clip-path: circle(<length|percentage> at <position>);*/
+/*end*/
+/*start-> clip-path: ellipse(<length|percentage>{2} at <position>);;*/
+/*end*/
+/*start-> clip-path: inset(<length|percentage>{1,4} round <border-radius>{1,4});*/
+/*
+Length/Percentage: can represent all four sides, top/bottom sides, or top side
+Length/Percentage: can represent left/right sides or right side
+Length/Percentage: represents the bottom side
+Length/Percentage: represents the left side
+Border radius: requires the "round" keyword before the value
+*/
+/*end*/
+/*start-> clip-path: polygon(<length|percentage>);*/
+/*
+example:
+0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%
+*/
+/*end*/
+/*examples:
+-ms-flex-line-pack: center | distribute | 
+  end | justify | start | stretch
+-webkit-align-content: center | flex-end | 
+  flex-start | space-around | space-between | stretch
+align-content: center | flex-end | flex-start | 
+  space-around | space-between | stretch
+*/
+/*examples:
+-ms-flex-item-align: auto | baseline | center | end | start | stretch
+-webkit-align-self: auto | baseline | center | flex-end | flex-start | stretch
+align-self: auto | baseline | center | flex-end | flex-start | stretch
+*/
+/*examples:
+-webkit-box-pack: center | end | justify | start
+-moz-box-pack: center | end | justify | start
+-ms-flex-pack: center | end | justify | start
+-webkit-justify-content: center | flex-end | flex-start | space-around | space-between
+justify-content: center | flex-end | flex-start | space-around | space-between
+*/
+/*examples:
+display: -webkit-box | -webkit-inline-box
+display: -moz-box | -moz-inline-box
+display: -ms-flexbox | -ms-inline-flexbox
+display: -webkit-flex | -webkit-inline-flex
+display: flex | inline-flex
+*/
+/*examples:
+-webkit-box-orient: block-axis | horizontal | inline-axis | vertical
+-webkit-box-direction: normal | reverse
+-moz-box-orient: block-axis | horizontal | inline-axis | vertical
+-moz-box-direction: normal | reverse
+-ms-flex-direction: column | column-reverse | row | row-reverse
+-webkit-flex-direction: column | column-reverse | row | row-reverse
+flex-direction: column | column-reverse | row | row-reverse
+*/
+/*examples:
+-ms-flex-flow: <-ms-flex-direction> || <-ms-flex-wrap>
+-webkit-flex-flow: <flex-direction> || <flex-wrap>
+flex-flow: <flex-direction> || <flex-wrap>
+*/
+/*examples:
+-webkit-box-ordinal-group: 1 | <positive integer>
+-moz-box-ordinal-group: 1 | <positive integer>
+-ms-flex-order: 0 | <integer>
+-webkit-order: 0 | <integer>
+order: 0 | <integer>
+*/
+
+/*# sourceMappingURL=uicenter.css.map */

@@ -1,0 +1,54 @@
+/*examples:
+-webkit-box-orient: block-axis | horizontal | inline-axis | vertical
+-webkit-box-direction: normal | reverse
+-moz-box-orient: block-axis | horizontal | inline-axis | vertical
+-moz-box-direction: normal | reverse
+-ms-flex-direction: column | column-reverse | row | row-reverse
+-webkit-flex-direction: column | column-reverse | row | row-reverse
+flex-direction: column | column-reverse | row | row-reverse
+*/
+
+// values : row|row-reverse|column|column-reverse|initial|inherit
+
+@mixin flex-direction($value:row) {
+
+
+
+    $box-orient-value : "";
+    $box-direction-value : "";
+
+    @if($value == row)
+    {
+	$box-orient-value : horizontal;
+	$box-direction-value : normal;
+    }
+    @else if($value == row-reverse)
+    {
+	$box-orient-value : horizontal;
+	$box-direction-value : reverse;
+    }
+    @else if($value == column)
+    {
+	$box-orient-value : vertical;
+	$box-direction-value : normal;
+    }
+    @else if($value == column-reverse)
+    {
+	$box-orient-value : vertical;
+	$box-direction-value : reverse;
+    }
+    @else if( $value == inherit or $value == initial )
+    {
+	$box-orient-value : $value;
+	$box-direction-value : $value;
+    }
+	
+
+   -webkit-box-orient: $box-orient-value;
+   -webkit-box-direction: $box-direction-value;
+   -webkit-flex-direction: $value;
+      -moz-box-orient: $box-orient-value;
+      -moz-box-direction: $box-direction-value;
+       -ms-flex-direction: $value;
+           flex-direction: $value;
+}

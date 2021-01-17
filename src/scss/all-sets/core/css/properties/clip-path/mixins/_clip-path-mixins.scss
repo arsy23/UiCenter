@@ -1,0 +1,58 @@
+@mixin clip-path-none {
+    -webkit-clip-path: none;
+    clip-path: none;
+}
+
+@mixin clip-path($val) {
+    -webkit-clip-path: $val;
+    clip-path: $val;
+}
+
+/*start-> clip-path: circle(<length|percentage> at <position>);*/
+@mixin clip-path-circle($val) {
+    -webkit-clip-path: $val;
+    clip-path: $val;
+}
+
+/*end*/
+/*start-> clip-path: ellipse(<length|percentage>{2} at <position>);;*/
+@mixin clip-path-ellipase($val-x, $val-y) {
+    -webkit-clip-path: ellipase($val-x $val-y);
+    clip-path: ellipase($val-x $val-y);
+}
+
+/*end*/
+/*start-> clip-path: inset(<length|percentage>{1,4} round <border-radius>{1,4});*/
+/*
+Length/Percentage: can represent all four sides, top/bottom sides, or top side
+Length/Percentage: can represent left/right sides or right side
+Length/Percentage: represents the bottom side
+Length/Percentage: represents the left side
+Border radius: requires the "round" keyword before the value
+*/
+
+@mixin clip-path-inset($val-1, $rounded:false, $val-round:null) {
+    @if($rounded) {
+        -webkit-clip-path: inset($val-1 round $val-round);
+        clip-path: inset($val-1 round $val-round);
+    }
+
+    @else {
+        -webkit-clip-path: inset($val-1);
+        clip-path: inset($val-1);
+    }
+
+}
+
+/*end*/
+/*start-> clip-path: polygon(<length|percentage>);*/
+/*
+example:
+0 0, 50% 0, 100% 0, 100% 50%, 100% 100%, 50% 100%, 0 100%, 0 50%
+*/
+@mixin clip-path-polygon($val) {
+    -webkit-clip-path: polygon($val);
+    clip-path: polygon($val);
+}
+
+/*end*/

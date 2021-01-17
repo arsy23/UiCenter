@@ -1,0 +1,24 @@
+@mixin transition($value){
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -o-transition: $value;
+    transition:$value;
+}
+@mixin double-transition($value,$value-2){
+    -webkit-transition: $value, $value-2;
+    -moz-transition: $value, $value-2;
+    -o-transition: $value, $value-2;
+    transition:$value, $value-2;
+}
+@mixin triple-transition($value,$value-2){
+    -webkit-transition: $value, $value-2;
+    -moz-transition: $value, $value-2;
+    -o-transition: $value, $value-2;
+    transition:$value, $value-2;
+}
+@mixin transition-duration($value){
+    -webkit-transition-duration: $value;
+    -moz-transition-duration: $value;
+    -o-transition-duration: $value;
+    transition-duration:$value;
+}

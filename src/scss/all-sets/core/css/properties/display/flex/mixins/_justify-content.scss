@@ -1,0 +1,52 @@
+
+/*examples:
+-webkit-box-pack: center | end | justify | start
+-moz-box-pack: center | end | justify | start
+-ms-flex-pack: center | end | justify | start
+-webkit-justify-content: center | flex-end | flex-start | space-around | space-between
+justify-content: center | flex-end | flex-start | space-around | space-between
+*/
+
+// values : flex-start|flex-end|center|space-between|space-around|initial|inherit
+
+@mixin justify-content($value:space-between) {
+
+    $include : true;
+    $traditional-value : "";
+
+    @if($value == flex-end)
+    {
+	    $traditional-value : end;
+    }
+    @else if($value == flex-start)
+    {
+	    $traditional-value : start;
+    }
+    @else if($value == space-around)
+    {
+	    $traditional-value : distribute;
+        $include : false;
+    }
+    @else if($value == space-between)
+    {
+	    $traditional-value : justify;
+    }
+    @else if(
+		$value == inherit or
+ 		$value == initial or
+ 		$value == center 
+	)
+    {
+	$traditional-value : $value;
+    }
+
+    @if($include == true)
+    {
+        -webkit-box-pack: $traditional-value;
+        -moz-box-pack: $traditional-value;
+    }
+
+    -ms-flex-pack: $traditional-value;
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}

@@ -1,0 +1,31 @@
+@function list-remove-item-range($list, $index){
+
+}
+//example
+//nth-delete( (foo bar baz qux), 2 )     =>  foo baz qux
+//nth-delete( (foo, bar, baz, qux), 2 )  =>  foo, baz, qux
+//nth-delete( [foo bar baz qux], 2 )     =>  [foo baz qux]
+//nth-delete( [foo, bar, baz, qux], 2 )  =>  [foo, baz, qux]
+
+//nth-delete( (foo bar baz qux), -2 )    =>  foo bar qux
+//nth-delete( (foo, bar, baz, qux), -2 ) =>  foo, bar, qux
+//nth-delete( [foo bar baz qux], -2 )    =>  [foo bar qux]
+//nth-delete( [foo, bar, baz, qux], -2 ) =>  [foo, bar, qux]
+@function list-remove-item-nth($list, $index){
+    $result: ();
+
+    $index: if($index < 0, length($list) + $index + 1, $index);
+
+    //$bracketed: is-bracketed($list);
+
+    $separator: list-separator($list);
+
+    @for $i from 1 through length($list){
+
+        @if $i != $index { $result: append($result, nth($list, $i)); }
+    }
+
+    @return list-join-bracketed(list-clear(), $result, $separator);
+}
+
+

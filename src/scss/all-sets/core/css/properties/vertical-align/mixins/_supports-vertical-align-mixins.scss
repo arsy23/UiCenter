@@ -1,0 +1,11 @@
+@mixin supports-vertical-align($value : text-top) {
+
+    vertical-align: $value;
+
+    @supports (vertical-align: -webkit-baseline-middle) {
+        vertical-align: -webkit-baseline-middle;
+    }
+    @supports (vertical-align: -moz-middle-with-baseline) {
+        vertical-align: -moz-middle-with-baseline;
+    }
+}

@@ -1,0 +1,12 @@
+/*examples:
+-ms-flex-item-align: auto | baseline | center | end | start | stretch
+-webkit-align-self: auto | baseline | center | flex-end | flex-start | stretch
+align-self: auto | baseline | center | flex-end | flex-start | stretch
+*/
+@mixin align-self($value-1:baseline, $value-2:baseline) {
+    -ms-flex-item-align: $value-2;	 
+    //-ms-grid-row-align: $value-2;
+    -webkit-align-self: $value-1;
+    align-self: $value-1;
+
+}

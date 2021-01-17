@@ -1,0 +1,6 @@
+@function list-get-last-item($list){
+    @return nth($list, length($list));
+}
+@function list-get-first-item($list){
+        @return nth($list, 1);
+}

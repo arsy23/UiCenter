@@ -1,0 +1,11 @@
+@mixin text-align-last($value, $includeIe: $false){
+
+
+	@if($includeIe == $true)
+	{
+
+		text-align: justify !important;
+	}
+   -moz-text-align-last:$value;
+        text-align-last: $value;
+}

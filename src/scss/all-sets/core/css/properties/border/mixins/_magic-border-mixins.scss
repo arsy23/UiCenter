@@ -1,0 +1,30 @@
+@mixin magic-border($backgroundRgb, $boderEffectMode){
+    
+    
+            $background : unquote($backgroundRgb);
+            background-color: $background !important;
+            &:after{
+
+                content: '';
+                display: block;
+                position: absolute;
+                bottom:0;
+                right: 0;
+                width: 100%;
+                height: 1px;
+
+                $mode : unquote($boderEffectMode);
+                $mode : quote($mode);
+                // 'dark-gray' mode
+                @if($mode == 'dark-gray'){
+
+                    background-color: #302826;
+                    @include box-shadow(#{"0 0 5px 5px #292827"})
+                    
+                }
+
+                //other mode development
+
+    }
+
+}

@@ -1,0 +1,112 @@
+﻿//example
+//$font-tanha-base-path :#{"../../assets/fonts/tanha/tanha"};
+//$font-family-tanha : tanha;
+//$font-tanha-prefixes : (url otf, url  ttf, url  woff, url eot, url svg hello, url woff2);
+//@include font-face($font-family-tanha, $font-tanha-base-path, $font-tanha-prefixes);
+@mixin font-face($font-family, $font-base-path, $font-prefixes) {
+
+    $font-src: '' !default;
+    $font-base-path : unquote($font-base-path);
+    
+    @each $font-source,
+    $prefix
+    ,$svg-font-name
+     in $font-prefixes {
+        $font-source: to-lower-case($font-source);
+        $str-length: str-length($string: $font-src);
+
+        @if($str-length !=0) {
+            $font-src: str-insert($string: $font-src, $insert: ', ', $index: $str-length+1);
+        }
+        @include switch($prefix) {
+
+
+            @include switch-case(otf) {
+
+                @if($font-source == "url") {
+                    $font-src: $font-src + url(quote($font-base-path + ".otf"));
+                }
+                @else if($font-source == "local") {}
+                @include case-break;
+            }
+
+            @include switch-case(woff2) {
+
+                @if($font-source == "url") {
+                    $font-src: $font-src + url(quote($font-base-path + ".woff2")) + " format('woff2')";
+                }
+                @else if($font-source == "local") {}
+
+                @include case-break;
+            }
+
+            @include switch-case(svg) {
+
+                @if($font-source == "url") {
+                    $font-src: $font-src + url(quote($font-base-path + ".svg#"+ $svg-font-name)) + " format('woff2')";
+                }
+                @else if($font-source == "local") {}
+
+                @include case-break;
+            }
+
+            @include switch-case(eot) {
+                @if($font-source == "url") {
+                    $font-src: $font-src + url(quote($font-base-path + ".eot")) + ", ";
+                    $font-src: $font-src + url(quote($font-base-path + ".eot?#iefix")) + " format('embedded-opentype')";
+                }
+                @else if($font-source == "local") {}
+
+                @include case-break;
+            }
+
+            @include switch-case(ttf) {
+                @if($font-source == "url") {
+                    $font-src: $font-src + url(quote($font-base-path + ".ttf")) + " format('truetype')";
+                }
+                @else if($font-source == "local") {}
+
+
+                @include case-break;
+
+            }
+
+            @include switch-case(woff) {
+                @if($font-source == "url") {
+
+                    $font-src: $font-src + url(quote($font-base-path + ".woff")) + " format('woff')";
+
+                }
+                @else if($font-source == "local") {}
+                @include case-break;
+
+            }
+            @include switch-case(default) {
+                @include case-break;
+            }
+        }
+
+    }
+    @font-face {
+        font-family: $font-family;
+        src: #{$font-src};
+        font-weight: normal;
+    }
+}
+//css-syntax
+// @font-face {
+//   font-family: 'MyWebFont';
+//   src: url('webfont.eot'); /* IE9 Compat Modes */
+//   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//        url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+
+    // src:local('bYekan');
+        // local('b Yekan'),/*some browser like e.g. safari*/
+        // url('BYekan.eot?#iefix') format('embedded-opentype'),/*<= IE-8 hack*/
+        // url('BYekan.woff') format('woff'),/*modern browsers*/
+        // url('BYekan.ttf') format('truetype'),/*all browsers except IE*/
+        // url('BYekan.svg#BYekan') format('svg');
+// }

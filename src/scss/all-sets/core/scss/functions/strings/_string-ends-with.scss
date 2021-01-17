@@ -1,0 +1,71 @@
+
+@charset 'utf-8';
+
+@function string-ends-with($string, $find) {
+	
+
+  @if (str-index($string, $find) == (str-length($string) - str-length($find) + 1)) {
+
+    @return true;
+	
+  } @else {
+
+    @return false;
+  }
+}
+
+
+//Not Tested
+/// #string-ends-with($input-string, $substring[, $ignore-case]) => boolean
+/// Returns true if string ends with provided substring
+/// @param {string} $input-string
+/// @param {string} $substring
+/// @param {boolean} $ignore-case [false]
+/// @return {boolean}
+/// @example
+///   @debug string-starts-with('Hello World', 'Hel');
+///   // => true
+///   @debug string-starts-with('Hello World', 'hel');
+///   // => false
+///   @debug string-starts-with('Hello World', 'hel', true);
+///   // => true
+// @function string-ends-with($input-string, $substring, $ignore-case: false) {
+
+//   @if (string-is-blank($substring)) {
+//       @return true;
+//   }
+
+//   @if ($ignore-case) {
+//       $input-string: string-to-lowercase($input-string);
+//       $substring: string-to-lowercase($substring);
+//   }
+
+//   $start-index: str-length($substring) * -1;
+
+//   @return str-slice($input-string, $start-index, -1) == $substring;
+// }
+
+
+
+
+
+//1- First Function
+//UPDATE #2: The function above will return false if $string contains $find more than once.
+// This function will return true if $string truly ends with $find:
+
+//@function string.ends-with($string, $find) {
+//  @if (str-slice($string, (str-length($string) - str-length($find) + 1)) == $find) {
+//    @return true;
+//  } @else {
+//    @return false;
+//  }
+//}
+
+//UPDATE #3: Simplified:
+
+//@function string-ends-with($string, $find) {
+//  @return str-slice($string, (str-length($string) - str-length(string) + 1)) == $find;
+//}
+//@function string-not-ends-with($string, $find) {
+//  @return str-slice($string, (str-length($string) - str-length($find) + 1)) != $find;
+//}

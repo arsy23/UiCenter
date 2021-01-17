@@ -1,0 +1,18 @@
+//example
+// $color-stops-joined: #{ parameters-join(",", $color-stop-parameters) };
+@function parameters-join($delimiter, $parameters...){
+
+    $result : "";
+    @each $parameter in $parameters {
+
+        @if($result == "")
+        {
+            $result  : $result  + $parameter;
+        }
+        @else
+        {  
+            $result :  $result + $delimiter  + $parameter; 
+        }
+    }
+    @return $result;
+}

@@ -1,0 +1,16 @@
+/// #string-last-index($input-string, $substring) => number
+/// Returns last index of substring in provided string
+/// @param {string} $input-string
+/// @param {string} $substring
+/// @return {number}
+/// @example
+///   @debug string-last-index('Hello World', 'l');
+///   // => 10
+///   @debug string-last-index('Hello World', 'z');
+///   // => null
+
+@function string-last-index($input-string, $substring) {
+    $substring-info: string-substring-info($input-string, $substring);
+
+    @return map-get($substring-info, last-index);
+}

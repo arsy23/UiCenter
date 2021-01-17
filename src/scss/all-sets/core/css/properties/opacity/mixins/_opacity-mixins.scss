@@ -1,0 +1,42 @@
+@mixin opacity($value:0, $important: false) {
+
+	@if($important == false){
+
+   		$ie-value : $value * 100;
+
+  		/* IE 8 like 50 */
+  		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ie-value})";
+
+ 		 /* IE 5-7 like 50*/
+  		filter: alpha(opacity=$ie-value);
+
+ 	 	/* Netscape like .5*/
+ 	 	-moz-opacity: $value;
+
+  		/* Safari 1.x like .5*/
+  		-khtml-opacity: $value;
+
+  		/* Good browsers like .5*/
+  		opacity: $value;
+	}
+	@else{
+   		$ie-value : $value * 100 !important;
+
+  		/* IE 8 like 50 */
+  		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ie-value})" !important;
+
+ 		 /* IE 5-7 like 50*/
+  		filter: alpha(opacity=$ie-value) !important;
+
+ 	 	/* Netscape like .5*/
+ 	 	-moz-opacity: $value !important;
+
+  		/* Safari 1.x like .5*/
+  		-khtml-opacity: $value !important;
+
+  		/* Good browsers like .5*/
+  		opacity: $value !important;
+
+	}
+}
+

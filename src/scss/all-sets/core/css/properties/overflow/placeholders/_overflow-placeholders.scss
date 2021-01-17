@@ -1,0 +1,18 @@
+%overflow-auto{
+  overflow : auto !important;
+}
+%overflow-x-auto{
+  overflow-x : auto !important;
+}
+%overflow-y-auto{
+  overflow-y : auto !important;
+}
+
+%overflow-hidden{
+  overflow : hidden !important;
+}
+
+%overflow-scrolling-touch {
+
+    -webkit-overflow-scrolling: touch;
+}

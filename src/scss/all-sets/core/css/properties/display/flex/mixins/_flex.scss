@@ -1,0 +1,15 @@
+/*examples:
+display: -webkit-box | -webkit-inline-box
+display: -moz-box | -moz-inline-box
+display: -ms-flexbox | -ms-inline-flexbox
+display: -webkit-flex | -webkit-inline-flex
+display: flex | inline-flex
+*/
+@mixin flex($value : 1) {
+    -webkit-box-flex: $value;
+    -moz-box-flex: $value;
+    -ms-flex: $value;
+    -webkit-flex: $value;
+    flex: $value;
+
+}
