@@ -8,21 +8,3 @@
 @import "./import-all-transform";
 @import "./import-all-transition";
 @import "./import-all-overflow";
-@if($use-display == true)
-{
-}
-@if($use-overflow == true)
-{
-}
-@if($use-opacity == true)
-{
-}
-@if($use-filter == true)
-{
-}
-@if($use-transform == true)
-{
-}
-@if($use-transiotion == true)
-{
-}
