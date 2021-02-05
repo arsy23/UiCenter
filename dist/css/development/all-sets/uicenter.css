@@ -65,5 +65,477 @@ flex-flow: <flex-direction> || <flex-wrap>
 -webkit-order: 0 | <integer>
 order: 0 | <integer>
 */
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/core/css/properties/filter/placeholders/_filter-placeholders.scss */
+.blur-full {
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+}
+
+/* line 11, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/core/css/properties/overflow/placeholders/_overflow-placeholders.scss */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark {
+  color: #1d1d1d !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-inverted {
+  color: #e2e2e2 !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-background-inverted {
+  color: #1d1d1d !important;
+  background-color: #e2e2e2 !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-low {
+  color: rgba(29, 29, 29, 0.8) !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-low-inverted {
+  color: rgba(226, 226, 226, 0.8) !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-low-background-inverted {
+  color: rgba(29, 29, 29, 0.8) !important;
+  background-color: rgba(226, 226, 226, 0.8) !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-medium {
+  color: rgba(29, 29, 29, 0.5) !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-medium-inverted {
+  color: rgba(226, 226, 226, 0.5) !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-medium-background-inverted {
+  color: rgba(29, 29, 29, 0.5) !important;
+  background-color: rgba(226, 226, 226, 0.5) !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-high {
+  color: rgba(29, 29, 29, 0.3) !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-high-inverted {
+  color: rgba(226, 226, 226, 0.3) !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-dark-transparent-high-background-inverted {
+  color: rgba(29, 29, 29, 0.3) !important;
+  background-color: rgba(226, 226, 226, 0.3) !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light {
+  color: #dfdfdf !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-inverted {
+  color: #202020 !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-background-inverted {
+  color: #dfdfdf !important;
+  background-color: #202020 !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-low {
+  color: rgba(223, 223, 223, 0.8) !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-low-inverted {
+  color: rgba(32, 32, 32, 0.8) !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-low-background-inverted {
+  color: rgba(223, 223, 223, 0.8) !important;
+  background-color: rgba(32, 32, 32, 0.8) !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-medium {
+  color: rgba(223, 223, 223, 0.5) !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-medium-inverted {
+  color: rgba(32, 32, 32, 0.5) !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-medium-background-inverted {
+  color: rgba(223, 223, 223, 0.5) !important;
+  background-color: rgba(32, 32, 32, 0.5) !important;
+}
+
+/* line 29, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-high {
+  color: rgba(223, 223, 223, 0.3) !important;
+}
+
+/* line 32, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-high-inverted {
+  color: rgba(32, 32, 32, 0.3) !important;
+}
+
+/* line 35, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.color-light-transparent-high-background-inverted {
+  color: rgba(223, 223, 223, 0.3) !important;
+  background-color: rgba(32, 32, 32, 0.3) !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark {
+  background-color: #1d1d1d !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-inverted {
+  background-color: #e2e2e2 !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-color-inverted {
+  background-color: #1d1d1d !important;
+  color: #e2e2e2 !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-low {
+  background-color: rgba(29, 29, 29, 0.8) !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-low-inverted {
+  background-color: rgba(226, 226, 226, 0.8) !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-low-color-inverted {
+  background-color: rgba(29, 29, 29, 0.8) !important;
+  color: rgba(226, 226, 226, 0.8) !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-medium {
+  background-color: rgba(29, 29, 29, 0.5) !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-medium-inverted {
+  background-color: rgba(226, 226, 226, 0.5) !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-medium-color-inverted {
+  background-color: rgba(29, 29, 29, 0.5) !important;
+  color: rgba(226, 226, 226, 0.5) !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-high {
+  background-color: rgba(29, 29, 29, 0.3) !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-high-inverted {
+  background-color: rgba(226, 226, 226, 0.3) !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-dark-transparent-high-color-inverted {
+  background-color: rgba(29, 29, 29, 0.3) !important;
+  color: rgba(226, 226, 226, 0.3) !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light {
+  background-color: #dfdfdf !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-inverted {
+  background-color: #202020 !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-color-inverted {
+  background-color: #dfdfdf !important;
+  color: #202020 !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-low {
+  background-color: rgba(223, 223, 223, 0.8) !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-low-inverted {
+  background-color: rgba(32, 32, 32, 0.8) !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-low-color-inverted {
+  background-color: rgba(223, 223, 223, 0.8) !important;
+  color: rgba(32, 32, 32, 0.8) !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-medium {
+  background-color: rgba(223, 223, 223, 0.5) !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-medium-inverted {
+  background-color: rgba(32, 32, 32, 0.5) !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-medium-color-inverted {
+  background-color: rgba(223, 223, 223, 0.5) !important;
+  color: rgba(32, 32, 32, 0.5) !important;
+}
+
+/* line 58, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-high {
+  background-color: rgba(223, 223, 223, 0.3) !important;
+}
+
+/* line 62, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-high-inverted {
+  background-color: rgba(32, 32, 32, 0.3) !important;
+}
+
+/* line 66, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/coloring-system/_default-coloring-system.scss */
+.background-color-light-transparent-high-color-inverted {
+  background-color: rgba(223, 223, 223, 0.3) !important;
+  color: rgba(32, 32, 32, 0.3) !important;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-5 {
+  width: 5%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-0 {
+  width: 0%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-1 {
+  width: 1%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-10 {
+  width: 10%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-15 {
+  width: 15%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-23 {
+  width: 23%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-30 {
+  width: 30%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-40 {
+  width: 40%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-50 {
+  width: 50%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-60 {
+  width: 60%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-70 {
+  width: 70%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-80 {
+  width: 80%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-90 {
+  width: 90%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/width/_default-width.scss */
+.w-100 {
+  width: 100%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-5 {
+  height: 5%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-0 {
+  height: 0%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-1 {
+  height: 1%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-10 {
+  height: 10%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-15 {
+  height: 15%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-23 {
+  height: 23%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-30 {
+  height: 30%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-40 {
+  height: 40%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-50 {
+  height: 50%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-60 {
+  height: 60%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-70 {
+  height: 70%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-80 {
+  height: 80%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-90 {
+  height: 90%;
+}
+
+/* line 22, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/height/_default-height.scss */
+.h-100 {
+  height: 100%;
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/text/_default-text.scss */
+.text-center {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/opacity/_default-opacity.scss */
+.opacity-0 {
+  /* IE 8 like 50 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 5-7 like 50*/
+  filter: alpha(opacity=0);
+  /* Netscape like .5*/
+  -moz-opacity: 0;
+  /* Safari 1.x like .5*/
+  -khtml-opacity: 0;
+  /* Good browsers like .5*/
+  opacity: 0;
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/transform/_default-transform.scss */
+.transform-origin-center {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/transition/_default-transition.scss */
+.transition-default {
+  -webkit-transition: all 256ms linear;
+  -moz-transition: all 256ms linear;
+  -o-transition: all 256ms linear;
+  transition: all 256ms linear;
+}
+
+/* line 5, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/css-property/transition/_default-transition.scss */
+.transition-0 {
+  -webkit-transition: all 0s !important;
+  -moz-transition: all 0s !important;
+  -o-transition: all 0s !important;
+  transition: all 0s !important;
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/fast-coding/_set-box-location.scss */
+.center-location {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/fast-coding/_sizing.scss */
+.icon-sm {
+  width: 30px;
+  height: 30px;
+}
+
+/* line 1, C:/ProjectResources/Repositories/arsalanfallahpour/UiCenter/src/scss/all-sets/implementations/class-generator/fast-coding/_container-styling.scss */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /*# sourceMappingURL=uicenter.css.map */

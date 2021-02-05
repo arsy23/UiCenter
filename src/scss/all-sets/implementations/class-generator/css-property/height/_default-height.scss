@@ -1,0 +1,27 @@
+
+$heightPrecentages : (
+    "5" : .05%,
+    "0" : .0%,
+    "1" : .01%,
+    "10" : .1%,
+    "15" : .15%,
+    "23" : .23%,
+    "30" : .3%,
+    "40" : .4%,
+    "50" : .5%,
+    "60" : .6%,
+    "70" : .7%,
+    "80" : .8%,
+    "90" : .9%,
+    "100" : 1%,
+    )!default;
+
+    @each $name, $value in $heightPrecentages {
+    
+        $height-percentage: $value * 100;
+        .h-#{$name}{
+    
+            height: $height-percentage;  
+        }
+    }
+    

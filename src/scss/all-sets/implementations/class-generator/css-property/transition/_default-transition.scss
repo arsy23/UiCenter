@@ -1,0 +1,7 @@
+.transition-default{
+    @include transition(all 256ms linear);
+}
+
+.transition-0 {
+    @include transition(all 0s !important);
+}
